@@ -7,15 +7,15 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 @Entity
-class User {
+class Enduser {
 
   private @Id @GeneratedValue Long id;
   private String name;
   private String role;
 
-  User() {}
+  Enduser() {}
 
-  User(String name, String role) {
+  Enduser(String name, String role) {
 
     this.name = name;
     this.role = role;
@@ -50,11 +50,11 @@ class User {
 
     if (this == o)
       return true;
-    if (!(o instanceof User))
+    if (!(o instanceof Enduser))
       return false;
-    User user = (User) o;
-    return Objects.equals(this.id, user.id) && Objects.equals(this.name, user.name)
-        && Objects.equals(this.role, user.role);
+    Enduser enduser = (Enduser) o;
+    return Objects.equals(this.id, enduser.id) && Objects.equals(this.name, enduser.name)
+        && Objects.equals(this.role, enduser.role);
   }
 
   @Override
@@ -64,6 +64,6 @@ class User {
 
   @Override
   public String toString() {
-    return "User{" + "id=" + this.id + ", name='" + this.name + '\'' + ", role='" + this.role + '\'' + '}';
+    return "Enduser{" + "id=" + this.id + ", name='" + this.name + '\'' + ", role='" + this.role + '\'' + '}';
   }
 }
